@@ -23,7 +23,8 @@ import {
   fortmatic,
   magic,
   portis,
-  torus
+  torus,
+  sequence
 } from '../connectors'
 import { Spinner } from '../components/Spinner'
 
@@ -40,7 +41,8 @@ enum ConnectorNames {
   Fortmatic = 'Fortmatic',
   Magic = 'Magic',
   Portis = 'Portis',
-  Torus = 'Torus'
+  Torus = 'Torus',
+  Sequence = 'Sequence'
 }
 
 const connectorsByName: { [connectorName in ConnectorNames]: any } = {
@@ -56,7 +58,8 @@ const connectorsByName: { [connectorName in ConnectorNames]: any } = {
   [ConnectorNames.Fortmatic]: fortmatic,
   [ConnectorNames.Magic]: magic,
   [ConnectorNames.Portis]: portis,
-  [ConnectorNames.Torus]: torus
+  [ConnectorNames.Torus]: torus,
+  [ConnectorNames.Sequence]: sequence
 }
 
 function getErrorMessage(error: Error) {

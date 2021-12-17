@@ -11,6 +11,7 @@ import { FortmaticConnector } from '@web3-react/fortmatic-connector'
 import { MagicConnector } from '@web3-react/magic-connector'
 import { PortisConnector } from '@web3-react/portis-connector'
 import { TorusConnector } from '@web3-react/torus-connector'
+import { SequenceConnector } from '@web3-react/sequence-connector'
 
 const POLLING_INTERVAL = 12000
 const RPC_URLS: { [chainId: number]: string } = {
@@ -67,3 +68,5 @@ export const magic = new MagicConnector({
 export const portis = new PortisConnector({ dAppId: process.env.PORTIS_DAPP_ID as string, networks: [1, 100] })
 
 export const torus = new TorusConnector({ chainId: 1 })
+
+export const sequence = new SequenceConnector({ chainId: 137 })
